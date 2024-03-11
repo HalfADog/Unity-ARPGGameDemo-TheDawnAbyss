@@ -1,0 +1,525 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36b0e81b71c3614186d837935272b3b, type: 3}
+  m_Name: SimpleHFSMController
+  m_EditorClassIdentifier: 
+  realScriptControllerName: SimpleHFSMController
+  parameters:
+  - m_name: IsIdle
+    m_type: 2
+    baseValue: 0
+  - m_name: IsWalk
+    m_type: 2
+    baseValue: 0
+  - m_name: IsRun
+    m_type: 2
+    baseValue: 0
+  - m_name: IsGetHit
+    m_type: 3
+    baseValue: 0
+  - m_name: ToSM
+    m_type: 3
+    baseValue: 0
+  - m_name: ExitSM
+    m_type: 3
+    baseValue: 0
+  - m_name: IsAttack
+    m_type: 2
+    baseValue: 0
+  - m_name: IsRoll
+    m_type: 2
+    baseValue: 0
+  - m_name: IsSkill
+    m_type: 2
+    baseValue: 0
+  - m_name: Pause
+    m_type: 2
+    baseValue: 0
+  states:
+  - position:
+      serializedVersion: 2
+      x: 375.20032
+      y: 264.46686
+      width: 480
+      height: 90
+    isExecuting: 0
+    independentGenerate: 0
+    id: idle
+    stateType: 0
+    isDefault: 1
+    description: 
+    isTemporary: 0
+    canExitHandle: 0
+    canExitDescription: 
+  - position:
+      serializedVersion: 2
+      x: 818.5338
+      y: 587.80084
+      width: 480
+      height: 90
+    isExecuting: 0
+    independentGenerate: 0
+    id: walk
+    stateType: 0
+    isDefault: 0
+    description: 
+    isTemporary: 0
+    canExitHandle: 0
+    canExitDescription: 
+  - position:
+      serializedVersion: 2
+      x: -71.46575
+      y: 587.8014
+      width: 480
+      height: 90
+    isExecuting: 0
+    independentGenerate: 0
+    id: run
+    stateType: 0
+    isDefault: 0
+    description: 
+    isTemporary: 0
+    canExitHandle: 0
+    canExitDescription: 
+  - position:
+      serializedVersion: 2
+      x: -384.32056
+      y: -302.0471
+      width: 480
+      height: 90
+    isExecuting: 0
+    independentGenerate: 0
+    id: GetHit
+    stateType: 0
+    isDefault: 0
+    description: 
+    isTemporary: 1
+    canExitHandle: 1
+    canExitDescription: 
+  - position:
+      serializedVersion: 2
+      x: 545.46765
+      y: 183.80006
+      width: 480
+      height: 90
+    isExecuting: 0
+    independentGenerate: 0
+    id: Attack
+    stateType: 0
+    isDefault: 1
+    description: 
+    isTemporary: 0
+    canExitHandle: 0
+    canExitDescription: 
+  - position:
+      serializedVersion: 2
+      x: 962.1312
+      y: 577.13416
+      width: 480
+      height: 90
+    isExecuting: 0
+    independentGenerate: 0
+    id: Roll
+    stateType: 0
+    isDefault: 0
+    description: 
+    isTemporary: 0
+    canExitHandle: 0
+    canExitDescription: 
+  - position:
+      serializedVersion: 2
+      x: 168.79984
+      y: 580.4677
+      width: 480
+      height: 90
+    isExecuting: 0
+    independentGenerate: 0
+    id: Skill
+    stateType: 0
+    isDefault: 0
+    description: 
+    isTemporary: 0
+    canExitHandle: 0
+    canExitDescription: 
+  - position:
+      serializedVersion: 2
+      x: 355.46643
+      y: -296.46637
+      width: 480
+      height: 90
+    isExecuting: 0
+    independentGenerate: 0
+    id: Pause
+    stateType: 0
+    isDefault: 0
+    description: 
+    isTemporary: 1
+    canExitHandle: 1
+    canExitDescription: 
+  stateMachines:
+  - position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    isExecuting: 0
+    independentGenerate: 0
+    id: Root
+    stateType: 1
+    isDefault: 0
+    description: 
+    isRoot: 1
+    childStates:
+    - idle
+    - walk
+    - run
+    - GetHit
+    - SMTest
+    - Pause
+    defaultState: idle
+    transitions:
+    - b1d3d672c3f8a6c4e87909458ca8ef0c
+    - 32e92c3958341a240ae393f99274c76d
+    - d1251426f6f7f724cb5ed42426d2d6c9
+    - 6eb52f651c2f7ef4d8c48743337db8ff
+    - 142791eb58b7c77478f9a46daa325e83
+    - 6f00ff727a8a45e4993de910535a1b71
+    - 72960290082db7e4fb61aee389681de5
+    services: []
+    any:
+      position:
+        serializedVersion: 2
+        x: -392.00027
+        y: -42.66641
+        width: 480
+        height: 90
+      isExecuting: 0
+      independentGenerate: 0
+      id: Any
+      stateType: 0
+      isDefault: 0
+      description: 
+      isTemporary: 0
+      canExitHandle: 0
+      canExitDescription: 
+    entry:
+      position:
+        serializedVersion: 2
+        x: -395.33353
+        y: 263.999
+        width: 480
+        height: 90
+      isExecuting: 0
+      independentGenerate: 0
+      id: Entry
+      stateType: 0
+      isDefault: 0
+      description: 
+      isTemporary: 0
+      canExitHandle: 0
+      canExitDescription: 
+  - position:
+      serializedVersion: 2
+      x: 372.1322
+      y: 57.800114
+      width: 480
+      height: 90
+    isExecuting: 0
+    independentGenerate: 0
+    id: SMTest
+    stateType: 1
+    isDefault: 0
+    description: 
+    isRoot: 0
+    childStates:
+    - Attack
+    - Roll
+    - Skill
+    defaultState: Attack
+    transitions:
+    - dcb8546200345284d8372d4e5b4a2088
+    - d804815c8fb2cd246b856da5ae63ff30
+    - 24d2e8dfdc447bc45b44858a529e3d7c
+    services:
+    - id: SMService
+      serviceType: 2
+      customInterval: 1
+      description: 
+    any:
+      position:
+        serializedVersion: 2
+        x: -486.6672
+        y: -199.99985
+        width: 480
+        height: 90
+      isExecuting: 0
+      independentGenerate: 0
+      id: Any
+      stateType: 0
+      isDefault: 0
+      description: 
+      isTemporary: 0
+      canExitHandle: 0
+      canExitDescription: 
+    entry:
+      position:
+        serializedVersion: 2
+        x: -483.33386
+        y: 229.99973
+        width: 480
+        height: 90
+      isExecuting: 0
+      independentGenerate: 0
+      id: Entry
+      stateType: 0
+      isDefault: 0
+      description: 
+      isTemporary: 0
+      canExitHandle: 0
+      canExitDescription: 
+  transitions:
+  - id: b1d3d672c3f8a6c4e87909458ca8ef0c
+    from: idle
+    to: walk
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: IsWalk
+      compareType: 2
+      compareValue: 1
+  - id: 32e92c3958341a240ae393f99274c76d
+    from: walk
+    to: run
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: IsRun
+      compareType: 2
+      compareValue: 1
+  - id: d1251426f6f7f724cb5ed42426d2d6c9
+    from: run
+    to: idle
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: IsIdle
+      compareType: 2
+      compareValue: 1
+  - id: 6eb52f651c2f7ef4d8c48743337db8ff
+    from: Any
+    to: GetHit
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: IsGetHit
+      compareType: 2
+      compareValue: 0
+  - id: 142791eb58b7c77478f9a46daa325e83
+    from: Any
+    to: SMTest
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: ToSM
+      compareType: 2
+      compareValue: 0
+  - id: dcb8546200345284d8372d4e5b4a2088
+    from: Attack
+    to: Roll
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: IsRoll
+      compareType: 2
+      compareValue: 1
+  - id: d804815c8fb2cd246b856da5ae63ff30
+    from: Roll
+    to: Skill
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: IsSkill
+      compareType: 2
+      compareValue: 1
+  - id: 24d2e8dfdc447bc45b44858a529e3d7c
+    from: Skill
+    to: Attack
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: IsAttack
+      compareType: 2
+      compareValue: 1
+  - id: 6f00ff727a8a45e4993de910535a1b71
+    from: SMTest
+    to: idle
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: ExitSM
+      compareType: 2
+      compareValue: 0
+  - id: 72960290082db7e4fb61aee389681de5
+    from: Any
+    to: Pause
+    baseConditionsName: []
+    parameterConditionDatas:
+    - parameterName: Pause
+      compareType: 2
+      compareValue: 1
+  methodBlocks:
+  - methodType: 1
+    targetName: SMTest/SMService
+    targetDescription: 
+    methodAttributeLine: "\t[Service(\"SMTest/SMService\")]\n"
+    methodHeadLine: "\tprivate void on_SMService_service(Service service, ServiceExecuteType
+      type)\n"
+    methodBodyLines: "\t\tif (type == ServiceExecuteType.Service) Debug.Log(\"SMService
+      Execute\");\n"
+    linePosition: 15
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 0
+    targetName: idle
+    targetDescription: 
+    methodAttributeLine: "\t[State(\"idle\")]\n"
+    methodHeadLine: "\tprivate void on_idle_execute(State state, StateExecuteType
+      type)\n"
+    methodBodyLines: "\t\tif (type == StateExecuteType.OnEnter)\r\n\t\t{\r\n\t\t\tanimationPlayer.RequestTransition(\"Idle\");\r\n\t\t\tDebug.Log(\"Idle
+      Execute.\");\r\n\t\t}\r\n\t\telse if (type == StateExecuteType.OnLogic)\r\n\t\t{\r\n\t\t\tif
+      (animationPlayer.CurrentFinishPlaying)\r\n\t\t\t{\r\n\t\t\t\tSetBool(\"IsIdle\",
+      false);\r\n\t\t\t\tSetBool(\"IsRun\", false);\r\n\t\t\t\tSetBool(\"IsWalk\",
+      true);\r\n\t\t\t}\r\n\t\t}\n"
+    linePosition: 22
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 0
+    targetName: walk
+    targetDescription: 
+    methodAttributeLine: "\t[State(\"walk\")]\n"
+    methodHeadLine: "\tprivate void on_walk_execute(State state, StateExecuteType
+      type)\n"
+    methodBodyLines: "\t\tif (type == StateExecuteType.OnEnter)\r\n\t\t{\r\n\t\t\tanimationPlayer.RequestTransition(\"Walk\");\r\n\t\t\tDebug.Log(\"Walk
+      Execute.\");\r\n\t\t}\r\n\t\telse if (type == StateExecuteType.OnLogic)\r\n\t\t{\r\n\t\t\tif
+      (animationPlayer.CurrentFinishPlaying)\r\n\t\t\t{\r\n\t\t\t\tSetBool(\"IsIdle\",
+      false);\r\n\t\t\t\tSetBool(\"IsWalk\", false);\r\n\t\t\t\tSetBool(\"IsRun\",
+      true);\r\n\t\t\t}\r\n\t\t}\n"
+    linePosition: 41
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 0
+    targetName: run
+    targetDescription: 
+    methodAttributeLine: "\t[State(\"run\")]\n"
+    methodHeadLine: "\tprivate void on_run_execute(State state, StateExecuteType
+      type)\n"
+    methodBodyLines: "\t\tif (type == StateExecuteType.OnEnter)\r\n\t\t{\r\n\t\t\tanimationPlayer.RequestTransition(\"Run\");\r\n\t\t\tDebug.Log(\"Run
+      Execute.\");\r\n\t\t}\r\n\t\telse if (type == StateExecuteType.OnLogic)\r\n\t\t{\r\n\t\t\tif
+      (animationPlayer.CurrentFinishPlaying)\r\n\t\t\t{\r\n\t\t\t\tSetBool(\"IsRun\",
+      false);\r\n\t\t\t\tSetBool(\"IsWalk\", false);\r\n\t\t\t\tSetBool(\"IsIdle\",
+      true);\r\n\t\t\t}\r\n\t\t}\n"
+    linePosition: 60
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 0
+    targetName: GetHit
+    targetDescription: 
+    methodAttributeLine: "\t[State(\"GetHit\")]\n"
+    methodHeadLine: "\tprivate void on_GetHit_execute(State state, StateExecuteType
+      type)\n"
+    methodBodyLines: "\t\tif (type == StateExecuteType.OnEnter) animationPlayer.RequestTransition(\"GetHit\");\n"
+    linePosition: 79
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 0
+    targetName: Attack
+    targetDescription: 
+    methodAttributeLine: "\t[State(\"Attack\")]\n"
+    methodHeadLine: "\tprivate void on_Attack_execute(State state, StateExecuteType
+      type)\n"
+    methodBodyLines: "\t\tif (type == StateExecuteType.OnEnter)\r\n\t\t{\r\n\t\t\tanimationPlayer.RequestTransition(\"Attack\");\r\n\t\t\tDebug.Log(\"Attack
+      Execute.\");\r\n\t\t}\r\n\t\telse if (type == StateExecuteType.OnLogic)\r\n\t\t{\r\n\t\t\tif
+      (animationPlayer.CurrentFinishPlaying)\r\n\t\t\t{\r\n\t\t\t\tSetBool(\"IsAttack\",
+      false);\r\n\t\t\t\tSetBool(\"IsRoll\", true);\r\n\t\t\t\tSetBool(\"IsSkill\",
+      false);\r\n\t\t\t}\r\n\t\t}\n"
+    linePosition: 90
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 0
+    targetName: Roll
+    targetDescription: 
+    methodAttributeLine: "\t[State(\"Roll\")]\n"
+    methodHeadLine: "\tprivate void on_Roll_execute(State state, StateExecuteType
+      type)\n"
+    methodBodyLines: "\t\tif (type == StateExecuteType.OnEnter)\r\n\t\t{\r\n\t\t\tanimationPlayer.RequestTransition(\"Roll\");\r\n\t\t\tDebug.Log(\"Roll
+      Execute.\");\r\n\t\t}\r\n\t\telse if (type == StateExecuteType.OnLogic)\r\n\t\t{\r\n\t\t\tif
+      (animationPlayer.CurrentFinishPlaying)\r\n\t\t\t{\r\n\t\t\t\tSetBool(\"IsAttack\",
+      false);\r\n\t\t\t\tSetBool(\"IsRoll\", false);\r\n\t\t\t\tSetBool(\"IsSkill\",
+      true);\r\n\t\t\t}\r\n\t\t}\n"
+    linePosition: 109
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 0
+    targetName: Skill
+    targetDescription: 
+    methodAttributeLine: "\t[State(\"Skill\")]\n"
+    methodHeadLine: "\tprivate void on_Skill_execute(State state, StateExecuteType
+      type)\n"
+    methodBodyLines: "\t\tif (type == StateExecuteType.OnEnter)\r\n\t\t{\r\n\t\t\tanimationPlayer.RequestTransition(\"Skill\");\r\n\t\t\tDebug.Log(\"Skill
+      Execute.\");\r\n\t\t}\r\n\t\telse if (type == StateExecuteType.OnLogic)\r\n\t\t{\r\n\t\t\tif
+      (animationPlayer.CurrentFinishPlaying)\r\n\t\t\t{\r\n\t\t\t\tSetBool(\"IsAttack\",
+      true);\r\n\t\t\t\tSetBool(\"IsRoll\", false);\r\n\t\t\t\tSetBool(\"IsSkill\",
+      false);\r\n\t\t\t}\r\n\t\t}\n"
+    linePosition: 128
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 0
+    targetName: Pause
+    targetDescription: 
+    methodAttributeLine: "\t[State(\"Pause\")]\n"
+    methodHeadLine: "\tprivate void on_Pause_execute(State state, StateExecuteType
+      type)\n"
+    methodBodyLines: "\t\tif (type == StateExecuteType.OnEnter)\r\n\t\t{\r\n\t\t\tDebug.Log(\"Pause\");\r\n\t\t\tanimationPlayer.Stop();\r\n\t\t}\r\n\t\telse
+      if (type == StateExecuteType.OnExit)\r\n\t\t{\r\n\t\t\tanimationPlayer.Play();\r\n\t\t}\n"
+    linePosition: 147
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 2
+    targetName: GetHit
+    targetDescription: 
+    methodAttributeLine: "\t[CanExit(\"GetHit\")]\n"
+    methodHeadLine: "\tprivate bool can_GetHit_exit(State state)\n"
+    methodBodyLines: "\t\treturn animationPlayer.CurrentFinishPlaying;\n"
+    linePosition: 0
+    independentGenerate: 0
+    isDeleted: 0
+  - methodType: 2
+    targetName: Pause
+    targetDescription: 
+    methodAttributeLine: "\t[CanExit(\"Pause\")]\n"
+    methodHeadLine: "\tprivate bool can_Pause_exit(State state)\n"
+    methodBodyLines: "\t\treturn !GetBool(\"Pause\");\n"
+    linePosition: 0
+    independentGenerate: 0
+    isDeleted: 0
+  beforeMethod: "using RPGCore.AI.HFSM;\nusing RPGCore.Animation;\nusing UnityEngine;\npublic
+    partial class SimpleHFSMController : StateMachineScriptController\n{\n\tprivate
+    AnimationPlayerManager animationPlayer;\n\tpublic override void Init()\n\t{\n\t\tanimationPlayer
+    = gameObject.GetComponent<AnimationPlayerManager>();\n\t}\n//Don't delete or
+    modify the #region & #endregion\n#region Method\n"
+  afterMethod: '#endregion Method
+
+    }
+
+
+'
+  isGenerated: 1
+  controllerConfig:
+    CustomFilePath: 0
+    FilePath: 
+    UseNamespace: 0
+    Namespace: 
+    DisperseGenerate: 0
+    DisperseAll: 0
+  generateFilePath: D:/UnityProject/EditorToolsTest/Assets/Scripts/Unity-RPGCore-HFSM/Example/ExecutorControllers/
